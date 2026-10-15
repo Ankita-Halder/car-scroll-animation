@@ -146,7 +146,7 @@ function App() {
             />
 
             {/* Statistics */}
-            <div className="stats-container absolute left-1/2 top-[32%] grid w-[calc(100%-32px)] max-w-6xl -translate-x-1/2 grid-cols-2 gap-4 sm:top-[43%] sm:w-[calc(100%-64px)] sm:gap-8 md:grid-cols-4">
+            <div className="stats-container absolute left-1/2 top-[34%] grid w-[calc(100%-32px)] max-w-6xl -translate-x-1/2 grid-cols-2 gap-4 sm:top-[43%] sm:w-[calc(100%-64px)] sm:gap-8 md:grid-cols-4">
               
               <div className="stat-card text-center">
                 <h2 className="text-4xl font-bold text-[#d4ff3a] md:text-5xl">
