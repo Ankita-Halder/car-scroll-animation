@@ -47,11 +47,15 @@ function App() {
         // Make the car straight
         gsap.set(carRef.current, {
         rotation: 0,
-        x: -200,
+        x: window.innerWidth < 640 ? 0 : -200,
       });
         // Scroll-based animation
         gsap.to(carRef.current, {
-        x: () => window.innerWidth - carRef.current.offsetWidth - 50,
+          x: () =>
+  Math.max(
+    20,
+    window.innerWidth - carRef.current.offsetWidth - 20
+  ),
         scale: 1.05,
         ease: "none",
         scrollTrigger: {
@@ -112,7 +116,7 @@ function App() {
           <div className="relative z-10 flex h-full flex-col justify-center px-6 md:px-12 lg:px-20">
             
             {/* Heading */}
-            <h1 className="hero-title absolute top-[27%] w-full text-center text-4xl font-bold tracking-[0.18em] md:text-6xl lg:text-8xl">
+             <h1 className="hero-title absolute top-[20%] w-full px-4 text-center text-2xl font-bold tracking-[0.05em] sm:top-[24%] sm:text-4xl sm:tracking-[0.12em] md:top-[27%] md:text-6xl md:tracking-[0.15em] lg:text-8xl lg:tracking-[0.18em]">
               <span className="hero-letter inline-block">W</span>
               <span className="hero-letter inline-block">E</span>
               <span className="hero-letter inline-block">L</span>
@@ -138,11 +142,11 @@ function App() {
             ref={carRef}
             src={car}
             alt="Sports car"
-            className="absolute left-0 top-[57%] w-[380px] md:w-[560px] lg:w-[700px]"
+            className="absolute left-0 top-[83%] w-[75vw] max-w-[700px] sm:top-[60%] md:top-[57%]"
             />
 
             {/* Statistics */}
-            <div className="stats-container absolute left-1/2 top-[43%] grid w-[calc(100%-40px)] max-w-6xl -translate-x-1/2 grid-cols-2 gap-6 sm:w-[calc(100%-64px)] sm:gap-8 md:grid-cols-4">
+            <div className="stats-container absolute left-1/2 top-[32%] grid w-[calc(100%-32px)] max-w-6xl -translate-x-1/2 grid-cols-2 gap-4 sm:top-[43%] sm:w-[calc(100%-64px)] sm:gap-8 md:grid-cols-4">
               
               <div className="stat-card text-center">
                 <h2 className="text-4xl font-bold text-[#d4ff3a] md:text-5xl">
