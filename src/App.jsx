@@ -142,11 +142,11 @@ function App() {
             ref={carRef}
             src={car}
             alt="Sports car"
-            className="absolute left-0 top-[83%] w-[75vw] max-w-[700px] sm:top-[60%] md:top-[57%]"
+            className="absolute left-0 top-[72%] w-[75vw] max-w-[700px] sm:top-[60%] md:top-[57%]"
             />
 
             {/* Statistics */}
-            <div className="stats-container absolute left-1/2 top-[34%] grid w-[calc(100%-32px)] max-w-6xl -translate-x-1/2 grid-cols-2 gap-4 sm:top-[43%] sm:w-[calc(100%-64px)] sm:gap-8 md:grid-cols-4">
+            <div className="stats-container absolute left-1/2 top-[30%] grid w-[calc(100%-32px)] max-w-6xl -translate-x-1/2 grid-cols-2 gap-4 sm:top-[43%] sm:w-[calc(100%-64px)] sm:gap-8 md:grid-cols-4">
               
               <div className="stat-card text-center">
                 <h2 className="text-4xl font-bold text-[#d4ff3a] md:text-5xl">
